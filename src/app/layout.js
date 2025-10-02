@@ -1,5 +1,17 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import GlobalStyle from "./styles/globalStyles";
+import { Plus_Jakarta_Sans } from "next/font/google";
+import { Preahvihear } from "next/font/google";
+
+const preahvihear = Preahvihear({
+  subsets: ["latin"],
+  weight: "400"
+});
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"], // escolha os pesos que você precisa
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

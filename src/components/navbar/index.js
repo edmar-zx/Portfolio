@@ -1,0 +1,21 @@
+import React from 'react';
+import { Container, SplitNavbar, SplitNavbarLeft, SplitNavbarRight, TextContainer, TextNavbar, Header, Icon } from './navbar.styled';
+
+export default function Navbar() {
+    return (
+        <Header>
+            <Container>
+                <SplitNavbarLeft>
+                    <Icon src='/Logo.svg'/>
+                </SplitNavbarLeft>
+                <SplitNavbarRight>
+                    <TextContainer>
+                        <TextNavbar><a>Home</a></TextNavbar>
+                        <TextNavbar><a>About</a></TextNavbar>
+                        <TextNavbar><a>Lab</a></TextNavbar>
+                    </TextContainer>
+                </SplitNavbarRight>
+            </Container>
+        </Header>
+    )
+}

@@ -9,9 +9,8 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    font-family: Arial, sans-serif;
-    
-    background-color: rgba(26, 11, 46, 1);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #11071F;
     color: #333;
   }
 

@@ -1,36 +1,47 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-    background-color: #11071F;
+export const Header = styled.div`
+    background-color: rgba(26, 11, 46, 1);
+    width: 100%;
     display: flex;
-    padding: 40px 0px;
+    align-items: center;
+    justify-content: center;
+`;
+
+export const Container = styled.div`
+    width: 70%;
+    display: flex;
+    padding: 40px 0;
 `;
 
 export const TextNavbar = styled.p`
   color: #FFF;
-  font-family: Arial, sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;;
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
+  font-weight: 600;
 `;
-
-export const SplitNavbarLeft = styled.div`
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    margin: 0px 300px;
-    
-`
 
 export const SplitNavbarRight = styled.div`
     width: 50%;
     display: flex;
     align-items: center;
+    justify-content: center;
 `
 
-export const TextContainer = styled.div`
+export const SplitNavbarLeft = styled.nav`
+    width: 50%;
+    display: flex;
+`
+
+export const TextContainer = styled.ul`
     display: flex;
     justify-content: space-between;
     flex: 1;
+    list-style: none;
 `
+export const Icon = styled.img`
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+`;
