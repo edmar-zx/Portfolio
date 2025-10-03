@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 100vh;
   margin-top: 6.7rem;
 `;
 
@@ -14,6 +13,7 @@ export const Title = styled.h1`
 
 export const BoxProfile = styled.div`
   display: flex;
+  margin-bottom: 1rem
 `;
 
 export const ProfileImage = styled.img`
@@ -49,7 +49,7 @@ export const Highlight = styled.span`
   color: #7127BA;
 `;
 
-const BaseText = styled.p`
+/* const BaseText = styled.p`
   font-weight: 400;
   color: #fff;
   text-align: start;
@@ -67,3 +67,27 @@ export const HeroTitle = styled(BaseText).attrs({ as: "h1" })`
 export const CaptionText = styled(BaseText)`
   font-size: 12px;
 `;
+
+export const AboutText = styled(BaseText)`
+  font-size: 24px;
+  display: flex; 
+  align-items: center;
+`
+
+export const SubTitle = styled(BaseText).attrs({ as: "h2" })`
+  font-size: 40px;
+`; */
+
+export const FacebookHighlight = styled.span`
+  color: #1877f2; 
+`;
+
+export const FacebookIcone = styled.img`
+  width: 20px;
+  height: 20px;
+  margin: 0 8px;
+`
+
+export const DescriptionBox = styled.div`
+  margin-top: 6rem;
+`

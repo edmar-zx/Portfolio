@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, SplitNavbar, SplitNavbarLeft, SplitNavbarRight, TextContainer, TextNavbar, Header, Icon } from './navbar.styled';
+import { Container, SplitNavbar, SplitNavbarLeft, SplitNavbarRight, TextContainer, TextNavbar, Header, Icon } from './styles';
 
 export default function Navbar() {
     return (

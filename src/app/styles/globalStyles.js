@@ -31,7 +31,37 @@ export const Text = styled.span`
   text-align: center;
   margin-bottom: 10px;
   
+`;
 
+const BaseText = styled.p`
+  font-weight: 400;
+  color: #fff;
+  text-align: start;
+  font-family: 'Preahvihear', sans-serif;
+`;
+
+export const IntroText = styled(BaseText)`
+  font-size: 20px;
+`;
+
+export const HeroTitle = styled(BaseText).attrs({ as: "h1" })`
+  font-size: 48px;
+  line-height: 1.267;
+  letter-spacing: 0.96px;
+`;
+
+export const CaptionText = styled(BaseText)`
+  font-size: 12px;
+`;
+
+export const AboutText = styled(BaseText)`
+  font-size: 24px;
+  display: flex; 
+  align-items: center;
+`
+
+export const SubTitle = styled(BaseText).attrs({ as: "h2" })`
+  font-size: 40px;
 `;
 
 export default GlobalStyle;
