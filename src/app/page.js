@@ -4,6 +4,7 @@ import styled from "styled-components";
 import HomePage from "./pages/homePage";
 import Navbar from "@/components/navbar";
 import WorkExperience from "./pages/workExperience";
+import Skills from "./pages/skills";
 
 const Container = styled.div`
   backgrond-color: #11071F;
@@ -20,6 +21,7 @@ export default function Home() {
       <Container>
         <HomePage/>
         <WorkExperience/>
+        <Skills/>
       </Container>
     </>
 

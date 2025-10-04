@@ -40,28 +40,29 @@ const BaseText = styled.p`
   font-family: 'Preahvihear', sans-serif;
 `;
 
-export const IntroText = styled(BaseText)`
-  font-size: 20px;
-`;
-
-export const HeroTitle = styled(BaseText).attrs({ as: "h1" })`
+export const TextHeading1 = styled(BaseText).attrs({ as: "h1" })`
   font-size: 48px;
   line-height: 1.267;
   letter-spacing: 0.96px;
 `;
 
-export const CaptionText = styled(BaseText)`
-  font-size: 12px;
+export const TextHeading2 = styled(BaseText).attrs({ as: "h2" })`
+  font-size: 40px;
 `;
 
-export const AboutText = styled(BaseText)`
+export const TextBodyLarge = styled(BaseText)`
+  font-size: 20px;
+`;
+
+export const TextBodyMedium = styled(BaseText)`
   font-size: 24px;
   display: flex; 
   align-items: center;
 `
 
-export const SubTitle = styled(BaseText).attrs({ as: "h2" })`
-  font-size: 40px;
+export const TextCaption = styled(BaseText)`
+  font-size: 12px;
 `;
+
 
 export default GlobalStyle;

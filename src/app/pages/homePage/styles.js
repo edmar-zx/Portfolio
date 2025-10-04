@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.section`
   margin-top: 6.7rem;
 `;
 
@@ -46,37 +46,9 @@ export const BoxTop = styled.div`
 `
 
 export const Highlight = styled.span`
-  color: #7127BA;
-`;
-
-/* const BaseText = styled.p`
-  font-weight: 400;
   color: #fff;
-  text-align: start;
-  font-family: 'Preahvihear', sans-serif;
 `;
 
-export const IntroText = styled(BaseText)`
-  font-size: 20px;
-`;
-
-export const HeroTitle = styled(BaseText).attrs({ as: "h1" })`
-  font-size: 48px;
-`;
-
-export const CaptionText = styled(BaseText)`
-  font-size: 12px;
-`;
-
-export const AboutText = styled(BaseText)`
-  font-size: 24px;
-  display: flex; 
-  align-items: center;
-`
-
-export const SubTitle = styled(BaseText).attrs({ as: "h2" })`
-  font-size: 40px;
-`; */
 
 export const FacebookHighlight = styled.span`
   color: #1877f2; 

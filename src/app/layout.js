@@ -2,6 +2,13 @@ import { Geist, Geist_Mono } from "next/font/google";
 import GlobalStyle from "./styles/globalStyles";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { Preahvihear } from "next/font/google";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"], 
+  variable: "--font-poppins",
+});
 
 const preahvihear = Preahvihear({
   subsets: ["latin"],
@@ -10,7 +17,7 @@ const preahvihear = Preahvihear({
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "700"], // escolha os pesos que você precisa
+  weight: ["400", "500", "700"],
 });
 
 const geistSans = Geist({
@@ -30,7 +37,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-BR">
+    <html
+      lang="pt-BR"
+      className={`${poppins.variable} ${preahvihear.variable} ${jakarta.variable} ${geistSans.variable} ${geistMono.variable}`}
+    >
       <body>
         <GlobalStyle />
         {children}
@@ -38,3 +48,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
