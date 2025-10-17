@@ -3,9 +3,10 @@ import React from "react";
 import styled from "styled-components";
 
 import Navbar from "@/components/navbar";
-import HomePage from "@/components/homePage";
-import Skills from "@/components/skillsPage";
+import HomePage from "@/components/home";
+import Skills from "@/components/skills";
 import WorkExperience from "@/components/workExperience";
+import Projects from "@/components/projects";
 
 const Container = styled.div`
   backgrond-color: #11071F;
@@ -23,6 +24,7 @@ export default function Home() {
         <HomePage/>
         <WorkExperience/>
         <Skills/>
+        <Projects/>
       </Container>
     </>
 
