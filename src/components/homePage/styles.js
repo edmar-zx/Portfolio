@@ -45,10 +45,6 @@ export const BoxTop = styled.div`
 
 `
 
-export const Highlight = styled.span`
-  color: #fff;
-`;
-
 
 export const FacebookHighlight = styled.span`
   color: #1877f2; 

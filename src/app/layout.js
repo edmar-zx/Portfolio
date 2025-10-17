@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
       lang="pt-BR"
       className={`${poppins.variable} ${preahvihear.variable} ${jakarta.variable} ${geistSans.variable} ${geistMono.variable}`}
     >
-      <body>
+      <body suppressHydrationWarning>
         <GlobalStyle />
         {children}
       </body>

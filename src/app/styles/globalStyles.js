@@ -1,5 +1,5 @@
 'use client';
-import { styled, createGlobalStyle } from "styled-components";
+import { styled, createGlobalStyle, keyframes } from "styled-components";
 
 
 const GlobalStyle = createGlobalStyle`
@@ -40,10 +40,28 @@ const BaseText = styled.p`
   font-family: 'Preahvihear', sans-serif;
 `;
 
+
+const typing = keyframes`
+  from {
+    width: 0ch;
+  }
+  to {
+    width: 30ch;
+  }
+`;
+
+
 export const TextHeading1 = styled(BaseText).attrs({ as: "h1" })`
   font-size: 48px;
   line-height: 1.267;
   letter-spacing: 0.96px;
+
+  overflow: hidden;
+  white-space: nowrap;
+  width: 30ch;
+
+  /* 👇 Aqui você ajusta a velocidade */
+  animation: ${typing} 5s steps(100) 1 forwards;
 `;
 
 export const TextHeading2 = styled(BaseText).attrs({ as: "h2" })`
@@ -56,12 +74,20 @@ export const TextBodyLarge = styled(BaseText)`
 
 export const TextBodyMedium = styled(BaseText)`
   font-size: 24px;
-  display: flex; 
-  align-items: center;
+`
+
+export const TextBodySmall = styled(BaseText)`
+  font-size: 16px;
 `
 
 export const TextCaption = styled(BaseText)`
   font-size: 12px;
+`;
+
+
+export const Highlight = styled.span`
+  color: #7127BA;
+  
 `;
 
 

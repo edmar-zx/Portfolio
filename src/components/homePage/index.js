@@ -2,11 +2,11 @@
 import React from 'react';
 import {
   BoxDown, BoxProfile, BoxText, BoxTop, Container,
-  ProfileImage, Highlight, FacebookHighlight,
+  ProfileImage, FacebookHighlight,
   FacebookIcone, DescriptionBox
 } from './styles';
 
-import { TextCaption, TextBodyMedium, TextBodyLarge, TextHeading1 } from '@/app/styles/globalStyles';
+import { TextCaption, TextBodyMedium, TextBodyLarge, TextHeading1, Highlight } from '@/app/styles/globalStyles';
 
 export default function HomePage() {
   return (
