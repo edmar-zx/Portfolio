@@ -7,6 +7,7 @@ import HomePage from "@/components/home";
 import Skills from "@/components/skills";
 import WorkExperience from "@/components/workExperience";
 import Projects from "@/components/projects";
+import Contact from "@/components/contact";
 
 const Container = styled.div`
   backgrond-color: #11071F;
@@ -19,12 +20,13 @@ export default function Home() {
   return (
 
     <>
-      <Navbar/>
+      <Navbar />
       <Container>
-        <HomePage/>
-        <WorkExperience/>
-        <Skills/>
-        <Projects/>
+        <HomePage />
+        <WorkExperience />
+        <Skills />
+        <Projects />
+        <Contact />
       </Container>
     </>
 

@@ -1,14 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.section`
-    margin-top: 10rem;
-    @media (max-width: 768px) {
-        margin-top: 5rem;
-        padding: 0 1rem;
-    }
-`;
-
-export const ProjectCard = styled.div.withConfig({
+export const Container = styled.div.withConfig({
     shouldForwardProp: (prop) => prop !== "reverse",
 })`
   display: flex;
@@ -129,7 +121,6 @@ export const ImageProject = styled.img.withConfig({
     width: 100%;
     height: auto;
     border-radius: 10px;
-    
 
     @media (max-width: 768px) {
         padding-top: 1.5rem;
@@ -185,5 +176,4 @@ export const Gradient3 = styled.img`
   width: 625px;
   height: 700px;
   z-index: 2;
-
 `

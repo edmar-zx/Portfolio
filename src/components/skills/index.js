@@ -1,15 +1,15 @@
 import React from "react";
 import { Container, BoxText, BoxSkills, ImageSkills, ImageBox } from "./styles";
-import { TextBodyMedium, TextBodySmall, Highlight } from "@/app/styles/globalStyles";
+import { TextBodySmall, Highlight, TextBodyLarge } from "@/app/styles/globalStyles";
 import SkillsItems from "../skillsItems";
 
 export default function Skills() {
     return (
         <Container>
             <BoxText>
-                <TextBodyMedium>
+                <TextBodyLarge>
                     I'm currently looking to join a <Highlight>cross-functional</Highlight> team
-                </TextBodyMedium>
+                </TextBodyLarge>
                 <TextBodySmall>that values improving people's lives through accessible design </TextBodySmall>
             </BoxText>
             <BoxSkills>
