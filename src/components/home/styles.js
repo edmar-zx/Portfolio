@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  margin-top: 6.7rem;
+  margin-top: 15rem;
 `;
 
 export const Title = styled.h1`

@@ -18,17 +18,25 @@ const Container = styled.div`
 
 export default function Home() {
   return (
-
     <>
       <Navbar />
       <Container>
-        <HomePage />
-        <WorkExperience />
-        <Skills />
+        <section id="home">
+          <HomePage />
+        </section>
+
+        <section id="about">
+          <WorkExperience />
+        </section>
+
+        <section id="lab">
+          <Skills />
+        </section>
+        
         <Projects />
         <Contact />
+
       </Container>
     </>
-
-  )
+  );
 }
