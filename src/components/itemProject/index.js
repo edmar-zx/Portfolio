@@ -1,19 +1,14 @@
 import React from "react";
-import { Container, BoxText, ProjectTag, ProjectTitle, ProjectDescription, ProjectCard } from "./styles";
-import { BoxDescription } from "./styles";
-import { ProjectContent } from "./styles";
-import { BoxIcons } from "./styles";
-import { Icon } from "./styles";
-import { BoxImage } from "./styles";
-import { ImageProject } from "./styles";
+import {
+    Container, BoxText, ProjectTag, ProjectTitle, ProjectDescription, ProjectCard, BoxGradients, Gradient1, Gradient2, Gradient3,
+    BoxDescription, ProjectContent, BoxIcons, Icon, BoxImage, ImageProject
+} from "./styles";
 
-
-
-export default function ItemProject({ tag, title, description, icon }) {
+export default function ItemProject({ tag, title, description, icon, image, reverse, gradients }) {
     return (
         <Container>
-            <ProjectCard>
-                <ProjectContent>
+            <ProjectCard reverse={reverse}>
+                <ProjectContent reverse={reverse}>
                     <BoxText>
                         <ProjectTag>{tag}</ProjectTag>
                         <ProjectTitle>{title}</ProjectTitle>
@@ -27,8 +22,19 @@ export default function ItemProject({ tag, title, description, icon }) {
                     </BoxIcons>
                 </ProjectContent>
                 <BoxImage>
-                    <ImageProject src="/ImageProject-1.png" />
+                    <ImageProject src={image} reverse={reverse} />
                 </BoxImage>
+
+                <BoxGradients gradients={gradients}>
+                    {gradients ? (
+                        <>
+                            <Gradient1 src="/BackgroundGradient-1.png" />
+                            <Gradient2 src="/BackgroundGradient-2.png" />
+                        </>
+                    ) : (
+                        <Gradient3 src="/BackgroundGradient-3.png" />
+                    )}
+                </BoxGradients>
             </ProjectCard>
         </Container>
     )

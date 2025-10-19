@@ -2,29 +2,34 @@ import styled from "styled-components";
 
 export const Container = styled.section`
     margin-top: 10rem;
-
     @media (max-width: 768px) {
         margin-top: 5rem;
         padding: 0 1rem;
     }
 `;
 
-export const ProjectCard = styled.div`
-    display: flex;
-    gap: 2rem;
+export const ProjectCard = styled.div.withConfig({
+    shouldForwardProp: (prop) => prop !== "reverse",
+})`
+  display: flex;
+  gap: 2rem;
+  flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
 
-    @media (max-width: 1024px) {
-        flex-direction: column;
-    }
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 `;
 
-export const ProjectContent = styled.div`
+export const ProjectContent = styled.div.withConfig({
+    shouldForwardProp: (prop) => prop !== "reverse",
+})`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     gap: 2rem;
     width: 50%;
-
+    align-items: ${({ reverse }) => (reverse ? "flex-end" : "flex-start")};
+   
     @media (max-width: 1024px) {
         width: 100%;
     }
@@ -115,19 +120,70 @@ export const BoxImage = styled.div`
     }
 `;
 
-export const ImageProject = styled.img`
+export const ImageProject = styled.img.withConfig({
+    shouldForwardProp: (prop) => prop !== "reverse",
+})`
     padding-top: 3rem;
-    padding-left: 3rem;
+    padding-left: ${({ reverse }) => (reverse ? "0" : "3rem")};
+    padding-right: ${({ reverse }) => (reverse ? "3rem" : "0")};
     width: 100%;
     height: auto;
     border-radius: 10px;
+    
 
     @media (max-width: 768px) {
         padding-top: 1.5rem;
-        padding-left: 1.5rem;
+        padding-left: ${({ reverse }) => (reverse ? "0" : "1.5rem")};
+        padding-right: ${({ reverse }) => (reverse ? "1.5rem" : "0")};
     }
 
     @media (max-width: 480px) {
         padding: 1rem;
     }
 `;
+
+export const BoxGradients = styled.div.withConfig({
+    shouldForwardProp: (prop) => prop !== "gradients",
+})`
+  position: relative;
+  top: -150px;
+  left: ${({ gradients }) => (gradients ? "-800px" : "-400px")};
+  z-index: -1;
+
+  @media (max-width: 1024px) {
+    top: -550px;
+    left: ${({ gradients }) => (gradients ? "-100px" : "-200px")};
+  }
+
+  @media (max-width: 768px) {
+    top: -550px;
+    left: ${({ gradients }) => (gradients ? "-150px" : "-300px")};
+  }
+`;
+
+export const Gradient1 = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 642px;
+  height: 720px;
+  z-index: 1;
+`
+export const Gradient2 = styled.img`
+  position: absolute;
+  top: 0;
+  left: 226px;
+  width: 625px;
+  height: 700px;
+  z-index: 2;
+`
+
+export const Gradient3 = styled.img`
+  position: absolute;
+  top: 0;
+  left: 226px;
+  width: 625px;
+  height: 700px;
+  z-index: 2;
+
+`
