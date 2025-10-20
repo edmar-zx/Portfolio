@@ -7,9 +7,18 @@ export const Container = styled.div`
     justify-content: center;
     background-color: #251C31;
     padding: 1rem;
+
+    @media (max-width: 1024px) {
+        padding: 0.7rem;
+    }
 `
 
 export const SkillsIcon = styled.img`
     width: 40px;
     height: 40px;
+
+    @media (max-width: 1024px) {
+        width: 28px;
+        height: 28px;
+    }
 `

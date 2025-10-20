@@ -5,15 +5,14 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   position: relative; 
-
 `;
 
 export const BoxGradient = styled.div`
   position: absolute;
   top: -100px;
   left: 50%;
-  transform: translateX(-50%); /* centraliza */
-  z-index: 0; /* atrás dos cards */
+  transform: translateX(-50%);
+  z-index: 0;
 
 `
 export const GradientImage = styled.img`
@@ -27,9 +26,7 @@ export const WorkExperienceSection = styled.div`
   gap: 20px;
   z-index: 1;
     
-
-  @media (max-width: 768px) {
+  @media (max-width: 1400px) {
     grid-template-columns: 1fr;
   }
 `
-

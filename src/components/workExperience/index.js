@@ -2,7 +2,6 @@ import { Container, WorkExperienceSection, BoxGradient, GradientImage } from "./
 import { TextHeading2 } from '@/app/styles/globalStyles';
 import WorkCard from "@/components/workCard";
 
-
 export default function WorkExperience() {
     return (
         <Container>

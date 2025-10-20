@@ -4,8 +4,6 @@ import { Container, WorkInfos, WorkImage, WorkBoxTexts, WorkTitle, WorkSubtitle,
 export default function WorkCard({ image, title, subtitle, buttonText }) {
     return (
         <Container>
-            
-
             <WorkInfos>
                 <WorkImage src={image} alt={title} />
                 <WorkBoxTexts>
@@ -14,8 +12,6 @@ export default function WorkCard({ image, title, subtitle, buttonText }) {
                     <WorkButton>{buttonText}</WorkButton>
                 </WorkBoxTexts>
             </WorkInfos>
-
-
         </Container>
     )
 }

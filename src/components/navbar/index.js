@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Container, SplitNavbarLeft, SplitNavbarRight, TextContainer, TextNavbar, Header, Icon } from './styles';
+import { Container, SplitNavbarLeft, SplitNavbarRight, TextContainer, TextNavbar, Header, Icon, HamburgerButton, MobileMenu, MobileMenuItem } from './styles';
 
 export default function Navbar() {
 
     const[showNavbar, setShowNavbar] =  useState(true);
     const[lastScrollY, setLastScrollY] = useState(0);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const controlNavbar = () => {
         if(window.scrollY > lastScrollY) {
@@ -23,12 +24,16 @@ export default function Navbar() {
         };
     }, [lastScrollY])
 
-
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
         if (section) {
             section.scrollIntoView({ behavior: 'smooth' });
         }
+        setIsMobileMenuOpen(false);
+    }
+
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
     }
 
     return (
@@ -44,7 +49,17 @@ export default function Navbar() {
                         <TextNavbar><a onClick={() => scrollToSection('lab')}>Lab</a></TextNavbar>
                     </TextContainer>
                 </SplitNavbarRight>
+                <HamburgerButton onClick={toggleMobileMenu}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </HamburgerButton>
             </Container>
+            <MobileMenu $isOpen={isMobileMenuOpen}>
+                <MobileMenuItem><a onClick={() => scrollToSection('home')}>Home</a></MobileMenuItem>
+                <MobileMenuItem><a onClick={() => scrollToSection('about')}>About</a></MobileMenuItem>
+                <MobileMenuItem><a onClick={() => scrollToSection('lab')}>Lab</a></MobileMenuItem>
+            </MobileMenu>
         </Header>
     )
 }

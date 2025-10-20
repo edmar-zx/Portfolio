@@ -6,4 +6,3 @@ export const Container = styled.section`
     flex-direction: column;
     gap: 3rem;
 `
-

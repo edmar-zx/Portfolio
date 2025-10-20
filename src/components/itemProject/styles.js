@@ -7,7 +7,7 @@ export const Container = styled.div.withConfig({
   gap: 2rem;
   flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1400px) {
     flex-direction: column;
   }
 `;
@@ -22,7 +22,7 @@ export const ProjectContent = styled.div.withConfig({
     width: 50%;
     align-items: ${({ reverse }) => (reverse ? "flex-end" : "flex-start")};
    
-    @media (max-width: 1024px) {
+    @media (max-width: 1400px) {
         width: 100%;
     }
 `;
@@ -61,7 +61,7 @@ export const BoxDescription = styled.div`
     padding: 2rem;
     width: 113%;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1400px) {
         width: 100%;
         padding: 1.5rem;
     }
@@ -108,7 +108,7 @@ export const BoxImage = styled.div`
     border-radius: 10px;
     cursor: pointer;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1400px) {
         width: 100%;
     }
 `;
@@ -142,7 +142,7 @@ export const BoxGradients = styled.div.withConfig({
   left: ${({ gradients }) => (gradients ? "-800px" : "-400px")};
   z-index: -1;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1400px) {
     top: -550px;
     left: ${({ gradients }) => (gradients ? "-100px" : "-200px")};
   }

@@ -9,6 +9,11 @@ export const BoxText = styled.div`
     flex-direction: column;
     align-items: center;
     margin-bottom: 4rem;
+
+    @media (max-width: 1024px) {
+        margin-bottom: 2rem;
+        gap: 2rem;
+    }
 `
 
 export const BoxSkills = styled.div`
@@ -21,8 +26,19 @@ export const BoxSkills = styled.div`
 export const ImageBox = styled.div`
     display: flex;
     justify-content: center;
-    border: 1px solid #FF344;
 `
 
-export const ImageSkills = styled.img``
+export const ImageSkills = styled.img`
+   width: 895px;
+   height: 563px;
 
+    @media (max-width: 1024px) {
+        width: 795px;
+        height: 443px;
+    }
+
+    @media (max-width: 800px) {
+        width: 495px;
+        height: 263px;
+    }
+`

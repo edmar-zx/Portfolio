@@ -43,7 +43,7 @@ const typing = keyframes`
     width: 0ch;
   }
   to {
-    width: 30ch;
+    width: 100%;
   }
 `;
 
@@ -53,24 +53,68 @@ export const TextHeading1 = styled(BaseText).attrs({ as: "h1" })`
   letter-spacing: 0.96px;
   overflow: hidden;
   white-space: nowrap;
-  width: 30ch;
   animation: ${typing} 5s steps(100) 1 forwards;
+
+  br {
+    display: inline;
+  }
+
+  @media (max-width: 1280px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 40px;
+    text-align: center;
+    width: 100%;
+    
+    br {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+      white-space: normal;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 28px;
+  
+  }
 `;
 
 export const TextHeading2 = styled(BaseText).attrs({ as: "h2" })`
   font-size: 40px;
+  @media (max-width: 1024px) {
+    font-size: 36px;
+  }
 `;
 
 export const TextBodyLarge = styled(BaseText)`
   font-size: 24px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+    text-align: center;
+  }
 `
 
  export const TextBodyMedium = styled(BaseText)`
   font-size: 20px;
+
+  @media (max-width: 1024px) {
+    text-align: center;
+    font-size: 16px;
+  }
 `;
 
 export const TextBodySmall = styled(BaseText)`
   font-size: 16px;
+
+  @media (max-width: 1024px) {
+    font-size: 14px;
+    text-align: center;
+  }
 `
 
 export const TextCaption = styled(BaseText)`
