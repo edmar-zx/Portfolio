@@ -5,7 +5,6 @@ import {
   ProfileImage, FacebookHighlight,
   FacebookIcone, DescriptionBox
 } from './styles';
-
 import { TextCaption, TextBodyMedium, TextBodyLarge, TextHeading1, Highlight } from '@/app/styles/globalStyles';
 
 export default function HomePage() {
@@ -41,6 +40,5 @@ export default function HomePage() {
         <TextBodyLarge>between user needs and business goals.</TextBodyLarge>
       </DescriptionBox>
     </Container>  
-
   )
 }

@@ -19,8 +19,7 @@ export const BoxProfile = styled.div`
 export const ProfileImage = styled.img`
   width: 385px;
   height: 431px;
-  
-`
+`;
 
 export const BoxText = styled.div`
   display: flex;
@@ -42,9 +41,7 @@ export const BoxTop = styled.div`
   position: relative;
   left: -20px;
   margin-top: 20px; 
-
-`
-
+`;
 
 export const FacebookHighlight = styled.span`
   color: #1877f2; 
@@ -54,8 +51,8 @@ export const FacebookIcone = styled.img`
   width: 20px;
   height: 20px;
   margin: 0 8px;
-`
+`;
 
 export const DescriptionBox = styled.div`
   margin-top: 6rem;
-`
+`;

@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import {
     Container, BoxText, ProjectTag, ProjectTitle, ProjectDescription, BoxGradients, Gradient1, Gradient2, Gradient3,
-    BoxDescription, ProjectContent, BoxIcons, Icon, BoxImage, ImageProject
+    BoxDescription, ProjectContent, BoxIcons, Icon, BoxImage, ImageProject,
+    ModalOverlay,
+    ModalContent,
+    CloseButton,
+    ModalImage
 } from "./styles";
 
 export default function ItemProject({ tag, title, description, icon, image, reverse, gradients }) {
-    return (
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
+    return (
         <Container reverse={reverse}>
             <ProjectContent reverse={reverse}>
                 <BoxText>
@@ -21,9 +26,23 @@ export default function ItemProject({ tag, title, description, icon, image, reve
                     <Icon src={icon} />
                 </BoxIcons>
             </ProjectContent>
-            <BoxImage>
-                <ImageProject src={image} reverse={reverse} />
+
+            <BoxImage
+                onClick={() => setIsModalOpen(true)}
+            >
+                <ImageProject
+                    src={image}
+                    reverse={reverse}
+                />
             </BoxImage>
+            {isModalOpen && (
+                <ModalOverlay>
+                    <ModalContent>
+                        <CloseButton onClick={() => setIsModalOpen(false)}>×</CloseButton>
+                        <ModalImage src={image} />
+                    </ModalContent>
+                </ModalOverlay>
+            )}
 
             <BoxGradients gradients={gradients}>
                 {gradients ? (
@@ -36,6 +55,5 @@ export default function ItemProject({ tag, title, description, icon, image, reve
                 )}
             </BoxGradients>
         </Container>
-
-    )
+    );
 }

@@ -29,7 +29,6 @@ export const Text = styled.span`
   color: #000;
   text-align: center;
   margin-bottom: 10px;
-  
 `;
 
 const BaseText = styled.p`
@@ -69,7 +68,6 @@ export const TextBodyLarge = styled(BaseText)`
  export const TextBodyMedium = styled(BaseText)`
   font-size: 20px;
 `;
-
 
 export const TextBodySmall = styled(BaseText)`
   font-size: 16px;

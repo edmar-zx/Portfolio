@@ -106,6 +106,7 @@ export const BoxImage = styled.div`
     background-color: #2B0B3A;
     width: 50%;
     border-radius: 10px;
+    cursor: pointer;
 
     @media (max-width: 1024px) {
         width: 100%;
@@ -177,3 +178,70 @@ export const Gradient3 = styled.img`
   height: 700px;
   z-index: 2;
 `
+export const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+`;
+
+export const ModalContent = styled.div`
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    transform: scale(1.15);
+    transition: transform 0.5s ease;
+    &:hover {
+        transform: scale(1.60);
+    }
+
+    @media (max-width: 1024px) {
+     transform: scale(1);
+        &:hover {
+             transform: scale(1.15);
+        }
+    }
+    
+    @media (max-width: 768px) {
+     transform: scale(0.8);
+        &:hover {
+            transform: scale(1);
+        }
+    }
+`;
+
+export const ModalImage = styled.img`
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+`;
+
+export const CloseButton = styled.button`
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.1);  
+  }
+`;

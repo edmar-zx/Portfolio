@@ -19,9 +19,6 @@ const jakarta = Plus_Jakarta_Sans({
   weight: ["400", "500", "700"],
 });
 
-
-
-
 export default function RootLayout({ children }) {
   return (
     <html
@@ -35,4 +32,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-

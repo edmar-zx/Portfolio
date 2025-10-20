@@ -1,7 +1,6 @@
 'use client';
 import React from "react";
 import styled from "styled-components";
-
 import Navbar from "@/components/navbar";
 import HomePage from "@/components/home";
 import Skills from "@/components/skills";
@@ -14,8 +13,6 @@ const Container = styled.div`
   width: 70%;
   margin: 0 auto;
 `
-
-
 export default function Home() {
   return (
     <>
@@ -35,7 +32,6 @@ export default function Home() {
         
         <Projects />
         <Contact />
-
       </Container>
     </>
   );
