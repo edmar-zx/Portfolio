@@ -1,21 +1,65 @@
-import React from 'react';
-import { Container, SplitNavbarLeft, SplitNavbarRight, TextContainer, TextNavbar, Header, Icon } from './styles';
+import React, { useEffect, useState } from 'react';
+import { Container, SplitNavbarLeft, SplitNavbarRight, TextContainer, TextNavbar, Header, Icon, HamburgerButton, MobileMenu, MobileMenuItem } from './styles';
 
 export default function Navbar() {
+
+    const[showNavbar, setShowNavbar] =  useState(true);
+    const[lastScrollY, setLastScrollY] = useState(0);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    const controlNavbar = () => {
+        if(window.scrollY > lastScrollY) {
+            setShowNavbar(false);
+        }
+        else {
+            setShowNavbar(true);
+        }
+        setLastScrollY(window.scrollY);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', controlNavbar);
+        return () => {
+            window.removeEventListener('scroll', controlNavbar);
+        };
+    }, [lastScrollY])
+
+    const scrollToSection = (id) => {
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+        setIsMobileMenuOpen(false);
+    }
+
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+    }
+
     return (
-        <Header>
+        <Header className={showNavbar ? 'active': 'hidden'}>
             <Container>
                 <SplitNavbarLeft>
-                    <Icon src='/Logo.svg'/>
+                    <Icon src='/Logo.svg' />
                 </SplitNavbarLeft>
                 <SplitNavbarRight>
                     <TextContainer>
-                        <TextNavbar><a>Home</a></TextNavbar>
-                        <TextNavbar><a>About</a></TextNavbar>
-                        <TextNavbar><a>Lab</a></TextNavbar>
+                        <TextNavbar><a onClick={() => scrollToSection('home')}>Home</a></TextNavbar>
+                        <TextNavbar><a onClick={() => scrollToSection('about')}>About</a></TextNavbar>
+                        <TextNavbar><a onClick={() => scrollToSection('lab')}>Lab</a></TextNavbar>
                     </TextContainer>
                 </SplitNavbarRight>
+                <HamburgerButton onClick={toggleMobileMenu}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </HamburgerButton>
             </Container>
+            <MobileMenu $isOpen={isMobileMenuOpen}>
+                <MobileMenuItem><a onClick={() => scrollToSection('home')}>Home</a></MobileMenuItem>
+                <MobileMenuItem><a onClick={() => scrollToSection('about')}>About</a></MobileMenuItem>
+                <MobileMenuItem><a onClick={() => scrollToSection('lab')}>Lab</a></MobileMenuItem>
+            </MobileMenu>
         </Header>
     )
 }
